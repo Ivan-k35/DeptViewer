@@ -26,7 +26,7 @@
 
 1. Убедитесь, что у вас установлен [Docker](https://www.docker.com/get-started)
    и [Docker Compose](https://docs.docker.com/compose/), а так же запущен Docker Desktop на вашем компьютере (для
-   пользователей Windows и Linux).
+   пользователей Windows и macOS).
 2. Клонируйте репозиторий:
 
    ```bash
