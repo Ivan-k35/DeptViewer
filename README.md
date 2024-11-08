@@ -16,16 +16,17 @@
 
 - **Django 4.2**
 - **Python 3.12**
-- **PostgreSQL** 
+- **PostgreSQL**
 - **Redis**
-- **Twitter Bootstrap** 
+- **Twitter Bootstrap**
 
 ## Запуск проекта
 
 Для удобного развертывания используется Docker. Чтобы запустить проект:
 
 1. Убедитесь, что у вас установлен [Docker](https://www.docker.com/get-started)
-   и [Docker Compose](https://docs.docker.com/compose/).
+   и [Docker Compose](https://docs.docker.com/compose/), а так же запущен Docker Desktop на вашем компьютере (для
+   пользователей Windows и Linux).
 2. Клонируйте репозиторий:
 
    ```bash
@@ -37,8 +38,13 @@
    ```bash
    docker-compose up -d
 
-4. Древовидная структура подразделений и сотрудников доступна по
-   адресу http://localhost:8000/departments/department_tree/
+Проект будет доступен по адресу: http://localhost:8000.
+
+После запуска проекта автоматически будет выполнен скрипт для наполнения базы данных тестовыми данными. Этот процесс
+может занять несколько минут в зависимости от мощности вашего устройства.
+
+Древовидная структура подразделений и сотрудников доступна по
+адресу http://localhost:8000/departments/department_tree/.
 
 ## Создание суперпользователя
 
@@ -49,7 +55,7 @@
    ```bash
    docker exec -it dept_viewer  python manage.py createsuperuser
 
-2. После этого вы сможете войти в административную панель по адресу http://localhost:8000/admin
+2. После этого вы сможете войти в административную панель по адресу http://localhost:8000/admin.
 
 ## Остановка и удаление контейнеров
 
@@ -98,7 +104,7 @@
    ```bash
    python manage.py runserver
 
-Проект будет доступен по адресу http://localhost:8000
+Проект будет доступен по адресу http://localhost:8000.
 
 ## Создание суперпользователя
 
@@ -108,4 +114,4 @@
 python manage.py createsuperuser
 ```
 
-После этого админка будет доступна по адресу http://localhost:8000/admin
+После этого админка будет доступна по адресу http://localhost:8000/admin.
