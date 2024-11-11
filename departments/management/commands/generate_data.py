@@ -83,5 +83,7 @@ class Command(BaseCommand):
                 f"{len(departments)} отделов."))
 
         except Exception as e:
-            logger.error(f"Произошла ошибка при генерации данных: {e}")
+            error_message = f"Произошла ошибка при генерации данных: {e}"
+            self.stdout.write(self.style.ERROR(error_message))
+            logger.error(error_message)
             raise

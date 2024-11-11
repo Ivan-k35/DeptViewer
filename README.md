@@ -32,11 +32,13 @@
    ```bash
    git clone https://github.com/Ivan-k35/DeptViewer
    cd DeptViewer
+   ```
 
 3. Запустите проект с помощью Docker Compose:
 
    ```bash
    docker-compose up -d
+   ```
 
 Проект будет доступен по адресу: http://localhost:8000.
 
@@ -54,6 +56,7 @@
 
    ```bash
    docker exec -it dept_viewer  python manage.py createsuperuser
+   ```
 
 2. После этого вы сможете войти в административную панель по адресу http://localhost:8000/admin.
 
@@ -63,6 +66,7 @@
 
    ```bash
    docker-compose down
+   ```
 
 2. Эта команда остановит все контейнеры и удалит их, а также очистит ресурсы, созданные Docker Compose.
 
@@ -88,21 +92,25 @@
 
    ```bash
    pip install -r requirements.txt
+   ```
 
 3. Выполните миграции базы данных:
 
    ```bash
    python manage.py migrate
+   ```
 
 4. Для наполнения базы данных тестовыми данными выполните следующую команду:
 
    ```bash
    python manage.py generate_data
+   ```
 
 5. Запустите сервер разработки:
 
    ```bash
    python manage.py runserver
+   ```
 
 Проект будет доступен по адресу http://localhost:8000.
 
