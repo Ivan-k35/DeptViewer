@@ -22,7 +22,7 @@ def build_tree(departments):
                     "full_name": emp.full_name,
                     "position": emp.position,
                     "date_of_hire": emp.hire_date.strftime("%Y-%m-%d"),
-                    "salary": str(emp.salary),
+                    "salary": float(emp.salary),
                 } for emp in dept.employees.all()
             ],
             "children": [recurse(child) for child in dept.get_children()]

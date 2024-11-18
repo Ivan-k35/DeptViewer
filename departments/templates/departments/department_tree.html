@@ -40,8 +40,8 @@
 
                         <ul class="employee-list">
                             ${node.employees.map(emp => `
-                                <li>${emp.full_name} - ${emp.position}, Принят: ${emp.date_of_hire}, Зарплата: ${emp.salary}</li>
-                            `).join('')}
+                                <li>${emp.full_name} - ${emp.position}, Принят: ${emp.date_of_hire}, Зарплата: ${
+                    Number(emp.salary).toLocaleString('ru-RU', {style: 'currency', currency: 'RUB'})}</li>`).join('')}
                         </ul>
 
                         <ul class="department-children">
